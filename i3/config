@@ -72,6 +72,9 @@ bindsym $mod+Shift+s exec $HOME/.config/wacomright.sh
 # start obsidian
 bindsym $mod+o exec $HOME/Applications/Obsidian-1.6.7_fbe5be623488d0ecebb94f3b174ba197.AppImage
 
+# neovide
+bindsym $mod+Shift+i $HOME/Applications/neovide_fdbd577265105bef4f76e497f8c22e76.AppImage
+
 # start mindmap
 bindsym $mod+m exec $HOME/Applications/0.11.0_9081067d153171048697f49d9de1620c.AppImage
 
@@ -93,10 +96,10 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+l focus down
-bindsym $mod+h focus up
-bindsym $mod+k focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys: bindsym $mod+Left focus left bindsym $mod+Down focus down
 #bindsym $mod+Up focus up
@@ -108,10 +111,10 @@ bindsym $mod+k focus right
 
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+l move down
-bindsym $mod+Shift+h move up
-bindsym $mod+Shift+k move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
