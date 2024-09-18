@@ -39,7 +39,8 @@ exec --no-startup-id nm-applet
 # aoto startup
 exec_always --no-startup-id ~/.config/polybar.sh
 exec_always --no-startup-id fcitx5
-exec_always --no-startup-id variety
+# exec_always --no-startup-id variety
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers_s/monica.jpg
 exec_always --no-startup-id picom --config ~/.config/picom/picom.config
 
 # Change blank time to 1 hour
@@ -73,7 +74,7 @@ bindsym $mod+Shift+s exec $HOME/.config/wacomright.sh
 bindsym $mod+o exec $HOME/Applications/Obsidian-1.6.7_fbe5be623488d0ecebb94f3b174ba197.AppImage
 
 # neovide
-bindsym $mod+Shift+i $HOME/Applications/neovide_fdbd577265105bef4f76e497f8c22e76.AppImage
+bindsym $mod+Shift+i neovide
 
 # start mindmap
 bindsym $mod+m exec $HOME/Applications/0.11.0_9081067d153171048697f49d9de1620c.AppImage
