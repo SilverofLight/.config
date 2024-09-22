@@ -40,7 +40,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id ~/.config/polybar.sh
 exec_always --no-startup-id fcitx5
 # exec_always --no-startup-id variety
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers_s/monica.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/material-darker.png
 exec_always --no-startup-id picom --config ~/.config/picom/picom.config
 
 # Change blank time to 1 hour
@@ -66,6 +66,9 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec st
 
+# change bg urgently
+bindsym $mod+m exec feh --bg-fill ~/Pictures/wallpaper/material-darker.png
+
 # reset wacom
 bindsym $mod+Shift+a exec $HOME/.config/wacomleft.sh
 bindsym $mod+Shift+s exec $HOME/.config/wacomright.sh
@@ -74,10 +77,8 @@ bindsym $mod+Shift+s exec $HOME/.config/wacomright.sh
 bindsym $mod+o exec $HOME/Applications/Obsidian-1.6.7_fbe5be623488d0ecebb94f3b174ba197.AppImage
 
 # neovide
-bindsym $mod+Shift+i neovide
+bindsym $mod+Shift+i exec neovide
 
-# start mindmap
-bindsym $mod+m exec $HOME/Applications/0.11.0_9081067d153171048697f49d9de1620c.AppImage
 
 # brave
 bindsym $mod+Shift+Return exec brave
@@ -134,7 +135,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f fullscreen toggle global
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -224,6 +225,23 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+mode "changebg" {
+  # change bg in this mode
+  bindsym b exec feh --bg-fill ~/Pictures/wallpaper/nice-blue-background.png
+  bindsym s exec feh --bg-fill ~/Pictures/wallpapers_s/catGrilsFoot.jpg
+  bindsym v exec feh --bg-fill ~/Pictures/wallpapers_s/violet.png
+  bindsym h exec feh --bg-fill ~/Pictures/wallpapers_s/hamburger.jpg
+  bindsym m exec feh --bg-fill ~/Pictures/wallpapers_s/miko3269.jpg
+  bindsym o exec feh --bg-fill ~/Pictures/wallpapers_s/feetOrange.jpg
+  bindsym 1 exec feh --bg-fill ~/Pictures/wallpaper/langke.png
+  bindsym 2 exec feh --bg-fill ~/Pictures/wallpaper/nice-blue-background.png
+  bindsym 3 exec feh --bg-fill ~/Pictures/wallpaper/material-darker.png
+  bindsym 4 exec feh --bg-fill ~/Pictures/wallpaper/wallpaper_archgril.png
+
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+bindsym $mod+s mode changebg
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {8
