@@ -34,7 +34,7 @@ edit = [
 	{ run = '${EDITOR:-nvim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
 ]
 open = [
-	{ run = 'xdg-open "$1"',                desc = "Open", for = "linux" },
+	{ run = 'xdg-open "$1"&',                desc = "Open", for = "linux" },
 ]
 reveal = [
 	{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },
@@ -45,11 +45,17 @@ extract = [
 ]
 play = [
 	# { run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
-	{ run = 'vlc "$@"', orphan = true, for = "unix" },
+	{ run = 'vlc "$@"&', orphan = true, for = "unix" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 openpdf = [
-  { run = 'evince -- "$@"&', desc = "open pdf", for = "linux"}
+  { run = 'evince -- "$@"&', desc = "open pdf", for = "linux"},
+]
+fehbg = [
+  { run = 'feh --bg-fill "$@"', desc = "set bg", for = "linux"},
+]
+xournalpp = [
+  { run = 'xournalpp "$@"&', desc = "xournalpp", for = "linux"},
 ]
 
 [open]
@@ -59,13 +65,13 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
-	{ mime = "image/*", use = [ "open", "reveal" ] },
+	{ mime = "image/*", use = [ "open","fehbg", "reveal" ] },
 	# Media
 	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
   # pdf
-	{ mime = "*/pdf", use = [ "openpdf", "reveal" ] },
+	{ mime = "*/pdf", use = [ "openpdf","xournalpp", "reveal" ] },
 	# Archive
-	{ mime = "application/{,g}zip", use = [ "extract", "reveal" ] },
+	{ mime = "application/{,g}zip", use = [ "extract","xournalpp", "reveal" ] },
 	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "extract", "reveal" ] },
 	# JSON
 	{ mime = "application/{json,x-ndjson}", use = [ "edit", "reveal" ] },
