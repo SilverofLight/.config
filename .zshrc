@@ -14,7 +14,12 @@ if [ "$(xmodmap -pke | grep -c 'Control_L')" -eq 1 ];then xmodmap $HOME/.Xmodmap
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export RANGER_LOAD_DEFAULT_RC=FALSE
-export PATH=$PATH:/home/silver/go/bin
+# export PATH=$PATH:/home/silver/go/bin
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -117,7 +122,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -l"
 alias v="nvim"
-# alias ra="ranger"
 alias lla="ls -la"
 alias la="ls -a"
 alias s="neofetch"
@@ -128,12 +132,15 @@ alias wifils="nmcli device wifi list"
 alias wificnn="nmcli device wifi connect"
 alias hmm="h-m-m"
 alias lg="lazygit"
-alias vv="~/Applications/neovide_fdbd577265105bef4f76e497f8c22e76.AppImage"
 alias setbg="feh --bg-fill"
 alias showip="nmcli device show | grep IP4 | awk 'NR==1 {print $2}'"
 alias c="cowsay"
 alias cs="cowsay 大傻逼"
 alias cn="cowsay 牛逼"
+alias vv="nvim ~/Study/TODOlist.md"
+alias t="tmux"
+alias ta="tmux a"
+alias en="~/.config/touchEtyma.sh"
 
 # 临时
 alias link="scrcpy"

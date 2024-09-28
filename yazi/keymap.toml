@@ -131,6 +131,7 @@ keymap = [
 	{ on = [ "g", "o" ],       run = "cd ~/Study/Obsidian/", desc = "Goto Obsidian" },
 	{ on = [ "g", "e" ],       run = "cd ~/Study/etyma/",    desc = "Goto Etyma" },
 	{ on = [ "g", "y" ],       run = "cd ~/.config/yazi/",   desc = "Goto yazi config" },
+	{ on = [ "g", "w" ],       run = "cd ~/.local/share/WeChat_Data/Documents/xwechat_files",   desc = "Goto wechat" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
