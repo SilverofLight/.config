@@ -52,3 +52,9 @@ require("githead"):setup({
   untracked_color = "blue",
   untracked_symbol = "?",
 })
+
+-- full-forder
+require("full-border"):setup {
+	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
+	type = ui.Border.ROUNDED,
+}

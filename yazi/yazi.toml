@@ -79,7 +79,7 @@ rules = [
 	# Empty file
 	{ mime = "inode/x-empty", use = [ "edit", "reveal" ] },
 	# Fallback
-	{ name = "*", use = [ "edit", "open", "reveal" ] },
+	{ name = "*", use = [ "open", "edit", "reveal" ] },
 ]
 
 [tasks]
