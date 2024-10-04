@@ -75,13 +75,13 @@ fade-exclude = [
 
 # 动画
 animations = true;
-animation-window-mass = 0.4;
-animation-dampening = 16;
-animation-stiffness-in-tag = 125;
+animation-window-mass = 1.0;
+animation-dampening = 10;
+animation-stiffness-in-tag = 100;
 animation-for-open-window = "zoom";
 animation-for-unmap-window = "squeeze";
 animation-exclude = [
-    "class_g = 'fcitx5'",
+    "class_g = 'fcitx'",
     "class_g = 'flameshot'",
     "class_g = 'Dunst'",
     "class_g = 'Rofi'",
@@ -104,8 +104,8 @@ blur-background-exclude = [
 ];
 
 # 针对窗口类型的设置
-# wintypes :
-# {
-#   tooltip: { fade = true; shadow = false; opacity = 0.85; focus = true; };
-#   fullscreen: { fade = true; shadow = false; focus = true; opacity = 0.93; };
-# };
+wintypes :
+{
+  tooltip: { fade = true; shadow = false; opacity = 0.85; focus = true; };
+  fullscreen: { fade = true; shadow = false; focus = true; opacity = 0.93; };
+};
