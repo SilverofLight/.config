@@ -12,7 +12,6 @@ evince/
 evolution/
 fcitx/
 fcitx5/
-fish/
 flutter/
 fontconfig/
 fvm/
@@ -67,3 +66,5 @@ Deskreen/
 xournalpp/
 Shotcut.conf
 flameshot/
+chromium
+google-chrome-for-testing/Crash Reports
