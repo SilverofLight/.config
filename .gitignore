@@ -1,4 +1,3 @@
-alacritty/
 autostart/
 baidunetdisk/
 balenaEtcher/
@@ -68,3 +67,6 @@ Shotcut.conf
 flameshot/
 chromium
 google-chrome-for-testing/Crash Reports
+kitty/
+labplot2rc
+psppirerc
