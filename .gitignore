@@ -71,3 +71,28 @@ kitty/
 labplot2rc
 psppirerc
 bleachbit
+GIMP/2.10/tool-options
+GIMP/2.10/internal-data
+GIMP/2.10
+gtk-2.0
+Cursor/Cache/Cache_Data
+Cursor/CachedData/b1e87884330fc271d5eb589e368c35f14e76dec0/chrome
+Cursor/CachedData/b1e87884330fc271d5eb589e368c35f14e76dec0
+Cursor/CachedExtensionVSIXs
+Cursor/CachedProfilesData/__default__profile__
+Cursor/Code Cache
+Cursor/Crashpad
+Cursor/DawnGraphiteCache
+Cursor/DawnWebGPUCache
+Cursor/Dictionaries
+Cursor/GPUCache
+Cursor/Local Storage/leveldb
+Cursor/Session Storage
+Cursor
+cherrytree
+clash
+powershell
+ranger/plugins/__pycache__
+session
+xfce4/panel
+cantorrc

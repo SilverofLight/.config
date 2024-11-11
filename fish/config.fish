@@ -28,6 +28,28 @@ if status is-interactive
       end
       rm -f "$tmp"
   end
+
+  # 开启系统代理
+  function proxy_on
+      set -x http_proxy http://127.0.0.1:7890
+      set -x https_proxy http://127.0.0.1:7890
+      set -x no_proxy 127.0.0.1,localhost
+      set -x HTTP_PROXY http://127.0.0.1:7890
+      set -x HTTPS_PROXY http://127.0.0.1:7890
+      set -x NO_PROXY 127.0.0.1,localhost
+      echo -e "\033[32m[√] 已开启代理\033[0m"
+  end
+  
+  # 关闭系统代理
+  function proxy_off
+      set -e http_proxy
+      set -e https_proxy
+      set -e no_proxy
+      set -e HTTP_PROXY
+      set -e HTTPS_PROXY
+      set -e NO_PROXY
+      echo -e "\033[31m[×] 已关闭代理\033[0m"
+  end
   alias ls="exa --icons"
   alias ll="exa --icons -l"
   alias la="exa --icons -a"
@@ -53,6 +75,7 @@ if status is-interactive
   alias dic="~/Documents/github/my_dict/dict"
   alias mp="mdpdf --style=$HOME/Documents/github/mdpdf/github.css"
   alias baidu="/usr/lib/baidunetdisk/baidunetdisk --no-sandbox %U &"
+  alias clash="/home/silver/Documents/github/clash-for-linux/start.sh"
 
   set -gx EDITOR nvim
   set -gx fish_greeting ''

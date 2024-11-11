@@ -31,10 +31,10 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-	{ run = '${EDITOR:-nvim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+	{ run = '${EDITOR:-nvim} "$@"', desc = "Nvim", block = true, for = "unix" },
 ]
 open = [
-	{ run = 'xdg-open "$1"&',                desc = "Open", for = "linux" },
+	{ run = 'xdg-open "$1"&', desc = "xdg-Open", for = "linux" },
 ]
 reveal = [
 	{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },
@@ -57,6 +57,9 @@ fehbg = [
 xournalpp = [
   { run = 'xournalpp "$@"&', desc = "xournalpp", for = "linux"},
 ]
+brave = [
+  { run = 'brave "$@"&', desc = "brave", for = "linux"},
+]
 
 [open]
 rules = [
@@ -69,7 +72,7 @@ rules = [
 	# Media
 	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
   # pdf
-	{ mime = "*/pdf", use = [ "openpdf","xournalpp", "reveal" ] },
+	{ mime = "*/pdf", use = [ "openpdf","xournalpp", "brave", "reveal" ] },
 	# Archive
 	{ mime = "application/{,g}zip", use = [ "extract","xournalpp", "reveal" ] },
 	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "extract", "reveal" ] },
