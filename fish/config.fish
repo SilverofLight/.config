@@ -30,15 +30,12 @@ if status is-interactive
   end
 
   # 开启系统代理
-  function proxy_on
-      set -x http_proxy http://127.0.0.1:7890
-      set -x https_proxy http://127.0.0.1:7890
-      set -x no_proxy 127.0.0.1,localhost
-      set -x HTTP_PROXY http://127.0.0.1:7890
-      set -x HTTPS_PROXY http://127.0.0.1:7890
-      set -x NO_PROXY 127.0.0.1,localhost
-      echo -e "\033[32m[√] 已开启代理\033[0m"
-  end
+  set -x http_proxy http://127.0.0.1:7890
+  set -x https_proxy http://127.0.0.1:7890
+  set -x no_proxy 127.0.0.1,localhost
+  set -x HTTP_PROXY http://127.0.0.1:7890
+  set -x HTTPS_PROXY http://127.0.0.1:7890
+  set -x NO_PROXY 127.0.0.1,localhost
   
   # 关闭系统代理
   function proxy_off
@@ -76,6 +73,8 @@ if status is-interactive
   alias mp="mdpdf --style=$HOME/Documents/github/mdpdf/github.css"
   alias baidu="/usr/lib/baidunetdisk/baidunetdisk --no-sandbox %U &"
   alias clash="/home/silver/Documents/github/clash-for-linux/start.sh"
+  alias cnnp="nmcli device wifi connect DIRECT-5C-HP\ DeskJet\ 2700\ series"
+  alias cnnw="nmcli device wifi connect WHUT-DORM"
 
   set -gx EDITOR nvim
   set -gx fish_greeting ''
